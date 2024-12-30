@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href=".\node_modules\js-datepicker\dist\datepicker.min.css">
+    <script src=".\node_modules\js-datepicker\dist\datepicker.min.js"></script>
+    <script src=".\node_modules\luxon\build\global\luxon.min.js"></script>
     <script type="module" src="./script.js" defer></script>
     <title>Age Calculator</title>
 </head>
 <body>
     <div id="age-caulculator-container">
         <h2>Age Calculator</h2>
-        <form id="form-container">
+        <form id="form-container" method="post">
             <label for="birthdate">Enter your birth date:</label>
             <div>
                 <input type="text" id="birthdate" name="birthdate" placeholder="__/__/____" />
-                <img src="./date.png" alt="date">
+                <img id="date-icon" src="./date.png" alt="date">
             </div>
-            <input type="submit" value="Calculate" />
+            <button id="calculate" type="subimit">Calculate</button>
         </form>
+        <div id="result"></div>
     </div>
+    <a href="https://www.flaticon.com/free-icons/date" title="date icons"><img src="./date.png" alt="date"> Date icons created by Phoenix Group - Flaticon</a>
 </body>
 </html>
-<!-- <a href="https://www.flaticon.com/free-icons/date" title="date icons">Date icons created by Phoenix Group - Flaticon</a> -->
